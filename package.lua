@@ -1,6 +1,6 @@
 return {
   name = "creationix/termbox",
-  version = "1.0.2",
+  version = "1.0.3",
   homepage = "https://github.com/creationix/lit-termbox",
   files = {
     "*.lua",
