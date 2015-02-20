@@ -4,8 +4,7 @@ TARGET_DIR=$(LUAJIT_OS)-$(LUAJIT_ARCH)/
 
 ifeq ($(LUAJIT_OS), OSX)
 TERMBOX_LIB=libtermbox.dylib
-endif
-ifeq ($(LUAJIT_OS), Linux)
+else
 TERMBOX_LIB=libtermbox.so
 endif
 
