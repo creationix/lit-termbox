@@ -14,10 +14,10 @@ libs: build
 	mkdir -p $(TARGET_DIR)
 	cp build/$(TERMBOX_LIB) $(TARGET_DIR)
 
-termbox:
+termbox/src:
 	git submodule update --init termbox
 
-build: termbox
+build: termbox/src
 	cmake -Bbuild -H. -GNinja
 
 test: build
