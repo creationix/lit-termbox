@@ -20,8 +20,16 @@ termbox/src:
 build: termbox/src
 	cmake -Bbuild -H. -GNinja
 
-test: build
-	LUVI_APP=test-app lit
+termbox-sample/main.lua:
+	git submodule update --init termbox-sample
+
+termbox-sample/deps: termbox-sample/main.lua
+	cd termbox-sample && lit install
+	rm -rf termbox-sample/deps/termbox
+	ln -s ../.. termbox-sample/deps/termbox
+
+test: build termbox-sample/deps
+	LUVI_APP=termbox-sample lit
 
 clean:
-	rm -rf build
+	rm -rf build termbox-sample/deps

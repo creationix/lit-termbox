@@ -6,7 +6,7 @@ return {
     "*.lua",
     "*.h",
     "!termbox",
-    "!test-app"
+    "!test-app",
     "$OS-$ARCH/*",
   }
 }
