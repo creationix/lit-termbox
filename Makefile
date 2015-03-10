@@ -28,7 +28,7 @@ termbox-sample/deps: termbox-sample/main.lua
 	rm -rf termbox-sample/deps/termbox
 	ln -s ../.. termbox-sample/deps/termbox
 
-test: build termbox-sample/deps
+test: libs termbox-sample/deps
 	LUVI_APP=termbox-sample lit
 
 clean:
