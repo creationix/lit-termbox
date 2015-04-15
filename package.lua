@@ -1,6 +1,6 @@
 return {
   name = "creationix/termbox",
-  version = "1.0.5",
+  version = "1.0.6",
   homepage = "https://github.com/creationix/lit-termbox",
   dependencies = {
     "creationix/ffi-loader@1.0.0",
@@ -9,7 +9,7 @@ return {
     "*.lua",
     "*.h",
     "!termbox",
-    "!test-app",
+    "!termbox-sample",
     "$OS-$ARCH/*",
   }
 }
