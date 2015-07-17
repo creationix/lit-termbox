@@ -6,7 +6,7 @@ local names = {
 }
 
 local ffi = require('ffi')
-ffi.cdef(module:load("termbox.h"))
+ffi.cdef((module:load("termbox.h")))
 
 local arch = ffi.os .. "-" .. ffi.arch
 return module:action(arch .. "/" .. names[arch], function (path)
